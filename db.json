@@ -5,70 +5,84 @@
       "title": "Random Project 1",
       "description": "Module 2 project - Integrate a React app with backend.",
       "price": 100,
-      "image": "../images/illustration1.jpg"
+      "image": "https://i.imgur.com/GvEoeXp.jpg"
     },
     {
       "id": 2,
       "title": "Random Project 2",
       "description": "Create a full-stack application using MERN stack.",
       "price": 75.0,
-      "image": "../images/illustration2.jpg"
+      "image": "https://i.imgur.com/WxPoutU.jpg"
     },
     {
       "id": 3,
       "title": "Random Project 3",
       "description": "Build a responsive UI with CSS Grid and Flexbox.",
       "price": 60.0,
-      "image": "../images/illustration3.jpg"
+      "image": "https://i.imgur.com/tT6t2Kz.jpg"
     },
     {
       "id": 4,
       "title": "Random Project 4",
       "description": "Implement user authentication with Firebase.",
       "price": 80.0,
-      "image": "../images/illustration4.jpg"
+      "image": "https://i.imgur.com/jxVxFmF.jpg"
     },
     {
       "id": 5,
       "title": "Random Project 5",
       "description": "Create a RESTful API using Express and MongoDB.",
       "price": 65.0,
-      "image": "../images/illustration5.jpg"
+      "image": "https://i.imgur.com/mkokOw3.jpg"
     },
     {
       "id": 6,
       "title": "Random Project 6",
       "description": "Integrate GraphQL into your React application.",
       "price": 90.0,
-      "image": "../images/illustration6.jpg"
+      "image": "https://i.imgur.com/76Grw9c.jpg"
     },
     {
       "id": 7,
       "title": "Random Project 7",
       "description": "Optimize performance with Webpack and Code Splitting.",
       "price": 75.0,
-      "image": "../images/illustration7.jpg"
+      "image": "https://i.imgur.com/fnM0ZIQ.jpg"
     },
     {
       "id": 8,
       "title": "Random Project 8",
       "description": "Build a real-time chat application with Socket.io.",
       "price": 70.0,
-      "image": "../images/illustration8.jpg"
+      "image": "https://i.imgur.com/m3Cb3az.jpg"
     },
     {
       "id": 9,
       "title": "Random Project 9",
       "description": "Implement serverless functions with AWS Lambda.",
       "price": 85.0,
-      "image": "../images/illustration9.jpg"
+      "image": "https://i.imgur.com/BHoQWSX.jpg"
     },
     {
       "id": 10,
       "title": "Random Project 10",
       "description": "Deploy your application to Heroku or Netlify.",
       "price": 95.0,
-      "image": "../images/illustration10.jpg"
+      "image": "https://i.imgur.com/QRvopBP.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Random Project 10",
+      "description": "Random Test.",
+      "price": 95.0,
+      "image": "https://i.imgur.com/zKXb5dc.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Random Project 10",
+      "description": "Random Test.",
+      "price": 95.0,
+      "image": "https://i.imgur.com/hk7RJ1M.jpg"
     }
   ]
 }
