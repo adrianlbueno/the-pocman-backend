@@ -1,34 +1,74 @@
 {
-  "projects": [
+  "illustrations": [
     {
       "id": 1,
-      "title": "Module 2 Project",
-      "description": "Module 2 project - Integrate a React app with backend."
+      "title": "Random Project 1",
+      "description": "Module 2 project - Integrate a React app with backend.",
+      "price": 50.0,
+      "url": "https://example.com/project1"
     },
     {
       "id": 2,
-      "title": "Module 3 Project",
-      "description": "Create a full-stack application using MERN stack."
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "projectId": 1,
-      "title": "Task 1",
-      "description": "Use Vite to create a basic React app"
-    },
-    {
-      "id": 2,
-      "projectId": 1,
-      "title": "Task 2",
-      "description": "Install React Router and setup routes"
+      "title": "Random Project 2",
+      "description": "Create a full-stack application using MERN stack.",
+      "price": 75.0,
+      "url": "https://example.com/project2"
     },
     {
       "id": 3,
-      "projectId": 2,
-      "title": "Task 3",
-      "description": "Create a form with 5 input fields"
+      "title": "Random Project 3",
+      "description": "Build a responsive UI with CSS Grid and Flexbox.",
+      "price": 60.0,
+      "url": "https://example.com/project3"
+    },
+    {
+      "id": 4,
+      "title": "Random Project 4",
+      "description": "Implement user authentication with Firebase.",
+      "price": 80.0,
+      "url": "https://example.com/project4"
+    },
+    {
+      "id": 5,
+      "title": "Random Project 5",
+      "description": "Create a RESTful API using Express and MongoDB.",
+      "price": 65.0,
+      "url": "https://example.com/project5"
+    },
+    {
+      "id": 6,
+      "title": "Random Project 6",
+      "description": "Integrate GraphQL into your React application.",
+      "price": 90.0,
+      "url": "https://example.com/project6"
+    },
+    {
+      "id": 7,
+      "title": "Random Project 7",
+      "description": "Optimize performance with Webpack and Code Splitting.",
+      "price": 75.0,
+      "url": "https://example.com/project7"
+    },
+    {
+      "id": 8,
+      "title": "Random Project 8",
+      "description": "Build a real-time chat application with Socket.io.",
+      "price": 70.0,
+      "url": "https://example.com/project8"
+    },
+    {
+      "id": 9,
+      "title": "Random Project 9",
+      "description": "Implement serverless functions with AWS Lambda.",
+      "price": 85.0,
+      "url": "https://example.com/project9"
+    },
+    {
+      "id": 10,
+      "title": "Random Project 10",
+      "description": "Deploy your application to Heroku or Netlify.",
+      "price": 95.0,
+      "url": "https://example.com/project10"
     }
   ]
 }
