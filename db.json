@@ -2,84 +2,84 @@
   "illustrations": [
     {
       "id": 1,
-      "title": "Random Project 1",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 100,
       "image": "https://i.imgur.com/GvEoeXp.jpg"
     },
     {
       "id": 2,
-      "title": "Random Project 2",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 75.0,
       "image": "https://i.imgur.com/WxPoutU.jpg"
     },
     {
       "id": 3,
-      "title": "Random Project 3",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 60.0,
       "image": "https://i.imgur.com/tT6t2Kz.jpg"
     },
     {
       "id": 4,
-      "title": "Random Project 4",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 80.0,
       "image": "https://i.imgur.com/jxVxFmF.jpg"
     },
     {
       "id": 5,
-      "title": "Random Project 5",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 65.0,
       "image": "https://i.imgur.com/mkokOw3.jpg"
     },
     {
       "id": 6,
-      "title": "Random Project 6",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 90.0,
       "image": "https://i.imgur.com/76Grw9c.jpg"
     },
     {
       "id": 7,
-      "title": "Random Project 7",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 75.0,
       "image": "https://i.imgur.com/fnM0ZIQ.jpg"
     },
     {
       "id": 8,
-      "title": "Random Project 8",
+      "title": "The Pocman Artwork",
       "description": "Build a real-time chat application with Socket.io.",
       "price": 70.0,
       "image": "https://i.imgur.com/m3Cb3az.jpg"
     },
     {
       "id": 9,
-      "title": "Random Project 9",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 85.0,
       "image": "https://i.imgur.com/BHoQWSX.jpg"
     },
     {
       "id": 10,
-      "title": "Random Project 10",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 95.0,
       "image": "https://i.imgur.com/QRvopBP.jpg"
     },
     {
       "id": 11,
-      "title": "Random Project 10",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 95.0,
       "image": "https://i.imgur.com/zKXb5dc.jpg"
     },
     {
       "id": 12,
-      "title": "Random Project 10",
+      "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 95.0,
       "image": "https://i.imgur.com/hk7RJ1M.jpg"
