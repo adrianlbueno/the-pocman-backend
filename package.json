@@ -13,10 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.1.4",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "run": "^1.5.0"
   },
   "devDependencies": {
-    "json-server": "^1.0.0-alpha.19",
+    "json-server": "^0.17.4",
     "json-server-auth": "^2.1.0",
     "nodemon": "^2.0.22"
   }
