@@ -5,6 +5,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 100,
+      "quantity": 10,
       "image": "https://i.imgur.com/GvEoeXp.jpg"
     },
     {
@@ -12,6 +13,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 75.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/WxPoutU.jpg"
     },
     {
@@ -19,6 +21,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 60.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/tT6t2Kz.jpg"
     },
     {
@@ -26,6 +29,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 80.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/jxVxFmF.jpg"
     },
     {
@@ -33,6 +37,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 65.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/mkokOw3.jpg"
     },
     {
@@ -40,6 +45,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 90.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/76Grw9c.jpg"
     },
     {
@@ -47,6 +53,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 75.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/fnM0ZIQ.jpg"
     },
     {
@@ -54,6 +61,7 @@
       "title": "The Pocman Artwork",
       "description": "Build a real-time chat application with Socket.io.",
       "price": 70.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/m3Cb3az.jpg"
     },
     {
@@ -61,6 +69,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 85.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/BHoQWSX.jpg"
     },
     {
@@ -68,6 +77,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 95.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/QRvopBP.jpg"
     },
     {
@@ -75,6 +85,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 95.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/zKXb5dc.jpg"
     },
     {
@@ -82,6 +93,7 @@
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 95.0,
+      "quantity": 10,
       "image": "https://i.imgur.com/hk7RJ1M.jpg"
     }
   ],
