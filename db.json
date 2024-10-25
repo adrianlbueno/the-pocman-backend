@@ -6,7 +6,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 100,
       "quantity": 10,
-      "image": "https://i.imgur.com/GvEoeXp.jpg"
+      "image": "https://i.imgur.com/8qutq94.jpg"
     },
     {
       "id": 2,
@@ -102,7 +102,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 95.0,
       "quantity": 10,
-      "image": "https://i.imgur.com/8qutq94.jpg"
+      "image": "https://i.imgur.com/GvEoeXp.jpg"
+
     }
   ],
   "users": []
