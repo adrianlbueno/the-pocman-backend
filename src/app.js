@@ -1,11 +1,13 @@
 require("dotenv").config();
 const jsonServer = require("json-server");
 const morgan = require("morgan");
-
+const express = require("express");
+const app = express();
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 const PORT = process.env.PORT || 4000;
+
 
 server.use(middlewares);
 server.use(morgan("dev"));
@@ -15,7 +17,7 @@ server.use((req, res, next) => {
   next();
 });
 server.use(router);
+app.use(express.static('public'))
 
-server.listen(PORT, () => {
-  console.log(`JSON Server is running at port ${PORT}`);
-});
+
+module.exports = app
