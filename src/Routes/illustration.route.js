@@ -7,10 +7,10 @@ app.post('/', (req, res) => {
 })
 
 
-app.put('/user', (req, res) => {
+app.put('/illustrations', (req, res) => {
     res.send('Got a PUT request at /user')
 })
 
-app.delete('/user', (req, res) => {
+app.delete('/illustrations', (req, res) => {
     res.send('Got a DELETE request at /user')
 })

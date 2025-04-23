@@ -1,5 +1,5 @@
 const app = require('./app')
-const withDB = require('./db')
+const withDB = require('./src/db.json')
 
 const PORT = process.env.PORT || 5005
 
