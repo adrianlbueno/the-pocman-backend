@@ -3,9 +3,6 @@ const jsonServer = require("json-server");
 const morgan = require("morgan");
 const express = require("express");
 const app = express().use(express.static(__dirname + '/'))
-
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 const PORT = process.env.PORT || 4000;
 
