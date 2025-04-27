@@ -1,32 +1,27 @@
 require("dotenv").config();
+const path = require("path");
+const express = require("express");
 const jsonServer = require("json-server");
 const morgan = require("morgan");
-const express = require("express");
-const app = express().use(express.static(__dirname + '/'))
+
+const app = express();
+const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
-const PORT = process.env.PORT || 4000;
-const getTokenFromHeader = require("../middleware/Auth.middleware");
-const illustrationRoute = require("../Routes/illustration.route");
-const users = require("../Routes/users.route");
 
-server.use(middlewares);
-server.use(morgan("dev"));
+// Middlewares
+app.use(morgan("dev"));
+app.use(middlewares);
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
 
-server.use((req, res, next) => {
-  // Middleware to disable CORS
+// CORS Middleware
+app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   next();
 });
 
-server.use(router);
-app.use(express.static('public'))
+// Your API Routes
+app.use('/illustrations', router); // `db.json` should have "illustrations" resource
+app.use('/users', router);          // `db.json` should have "users" resource
 
-app.use('/illustrations', illustrationRoute);
-app.use('/users', users);
-
-app.use(getTokenFromHeader);
-app.listen(PORT, function (){
-  console.log(`Server is running on port ${PORT}`);
-})
-
-module.exports = app
+module.exports = app;

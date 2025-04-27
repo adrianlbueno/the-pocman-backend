@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const Illustrator = new Schema(
+const IllustrationSchema = new Schema(
     {
         title: {
             type: String,
@@ -15,7 +15,6 @@ const Illustrator = new Schema(
             default: "",
             trim: true,
             required: [true, "description required"],
-
         },
         price: {
             type: Number,
@@ -34,4 +33,4 @@ const Illustrator = new Schema(
     }
 );
 
-module.exports = mongoose.model("Illustrator", Illustrator);
+module.exports = mongoose.model("Illustrator", IllustrationSchema);
