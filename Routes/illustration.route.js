@@ -7,7 +7,7 @@ const {goNext} = require("json-server-auth/dist/shared-middlewares");
 app.get('/', async (req, res) => {
     try{
         const illustrations = await Illustration.find();
-        console.log("retrieved illustratiosn", illustrations)
+        console.log("retrieved illustrations", illustrations)
         res.json(illustrations)
     }catch (error) {
         next(error);
