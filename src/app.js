@@ -6,7 +6,8 @@ const app = express().use(express.static(__dirname + '/'))
 const middlewares = jsonServer.defaults();
 const PORT = process.env.PORT || 4000;
 const getTokenFromHeader = require("../middleware/Auth.middleware");
-const illustrationRoute = require("./Routes/illustration.route");
+const illustrationRoute = require("../Routes/illustration.route");
+const users = require("../Routes/users.route");
 
 server.use(middlewares);
 server.use(morgan("dev"));
@@ -21,6 +22,8 @@ server.use(router);
 app.use(express.static('public'))
 
 app.use('/illustrations', illustrationRoute);
+app.use('/users', users);
+
 app.use(getTokenFromHeader);
 app.listen(PORT, function (){
   console.log(`Server is running on port ${PORT}`);

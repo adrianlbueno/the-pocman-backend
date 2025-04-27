@@ -2,9 +2,10 @@ const jwt = require("jsonwebtoken");
 const express = require("express");
 const app = express();
 
-const token = jwt.sign();
-
+const token = jwt.sign( ); //todo
+const SECRET = "testing"
 console.log(token);
+
 
 const getTokenFromHeader = (req, res, next) => {
     if (
@@ -15,7 +16,7 @@ const getTokenFromHeader = (req, res, next) => {
         const de = JSON.parse(
             Buffer.from(token.split(".")[1], "base64").toString()
         );
-        // verify is asyncronous
+
         jwt.verify(token, SECRET, (err, decoded) => {
             if (err) {
                 next();
