@@ -5,8 +5,8 @@ const User = require('../models/User.model')
 
 router.get('/users', function (req, res,next){
     User.find()
-        .then(allPosts =>{
-            res.render("index", {allPosts});
+        .then(allUsers =>{
+            res.render("index", {allUsers});
         })
         .catch(err => {
             console.log(err)
