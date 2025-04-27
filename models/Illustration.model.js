@@ -11,14 +11,14 @@ const Illustrator = new Schema(
             required: [true, "title required"],
         },
         description: {
-            type: Number,
+            type: String,
             default: "",
             trim: true,
             required: [true, "description required"],
 
         },
         price: {
-            type: String,
+            type: Number,
             default: "",
             trim: true,
         },
