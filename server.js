@@ -1,5 +1,8 @@
 const app = require('./app')
 const withDB = require('./src/db.json')
+const jsonServer = require('json-server')
+const router = jsonServer.router(path.join(__dirname, 'db.json'));
+
 
 const PORT = process.env.PORT || 5005
 
