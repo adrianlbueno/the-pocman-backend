@@ -22,7 +22,6 @@ app.post('/', getTokenFromHeader, async (req, res) => {
     }catch (error){
         next(error)
     }
-
 });
 
 app.put('/illustrations', (req, res) => {
