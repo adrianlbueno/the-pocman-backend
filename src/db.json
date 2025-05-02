@@ -12,9 +12,9 @@
       "id": 2,
       "title": "The Pocman Artwork",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": 100,
+      "price": 75.0,
       "quantity": 10,
-      "image": "https://i.imgur.com/7ilzs8y.jpg"
+      "image": "https://i.imgur.com/f5wtUx5.jpg"
     },
     {
       "id": 3,
@@ -119,14 +119,6 @@
       "price": 100,
       "quantity": 10,
       "image": "https://i.imgur.com/8qutq94.jpg"
-    },
-    {
-      "id": 16,
-      "title": "The Pocman Artwork",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": 75.0,
-      "quantity": 10,
-      "image": "https://i.imgur.com/f5wtUx5.jpg"
     }
   ]
 }
