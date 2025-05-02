@@ -4,7 +4,7 @@ const getTokenFromHeader = require("../middleware/Auth.middleware")
 const Illustration = require('models/Illustration.model');
 const {goNext} = require("json-server-auth/dist/shared-middlewares");
 
-app.get('/', async (req, res) => {
+app.get('/illustrations', async (req, res) => {
     try{
         const illustrations = await Illustration.find();
         console.log("retrieved illustrations", illustrations)
