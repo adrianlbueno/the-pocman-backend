@@ -5,7 +5,7 @@ const jsonServer = require("json-server");
 const morgan = require("morgan");
 
 const app = express();
-const router = jsonServer.router(path.join(__dirname, 'db.json'));
+const router = jsonServer.router(path.join(__dirname, './db.json'));
 const middlewares = jsonServer.defaults();
 
 app.use(morgan("dev"));
