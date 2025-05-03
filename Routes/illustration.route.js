@@ -1,35 +1,26 @@
 const express = require('express');
-const app = express();
-const getTokenFromHeader = require("../middleware/Auth.middleware")
-const Illustration = require('models/Illustration.model');
-const {goNext} = require("json-server-auth/dist/shared-middlewares");
+const router = express.Router();
+const getTokenFromHeader = require("../middleware/Auth.middleware");
+const Illustration = require('../models/Illustration.model');
 
-app.get('/illustrations', async (req, res) => {
-    try{
+router.get('/', async (req, res, next) => {
+    try {
         const illustrations = await Illustration.find();
-        console.log("retrieved illustrations", illustrations)
-        res.json(illustrations)
-    }catch (error) {
+        console.log(illustrations)
+
+        res.json(illustrations);
+    } catch (error) {
         next(error);
-        res.status(5000).send({error: "Fail to retrieve Illustrations"})
     }
 });
 
-app.post('/', getTokenFromHeader, async (req, res) => {
-    try{
+router.post('/', getTokenFromHeader, async (req, res, next) => {
+    try {
         const illustration = await Illustration.create(req.body);
         res.status(201).json(illustration);
-    }catch (error){
-        next(error)
+    } catch (error) {
+        next(error);
     }
 });
 
-app.put('/illustrations', (req, res) => {
-    res.send('PUT request to /illustrations');
-});
-
-app.delete('/illustrations', (req, res) => {
-    res.send('DELETE request to /illustrations');
-});
-
-module.exports = app;
+module.exports = router;

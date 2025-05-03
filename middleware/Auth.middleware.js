@@ -1,10 +1,5 @@
 const jwt = require("jsonwebtoken");
-const express = require("express");
-const app = express();
-const illustration = require("../models/Illustration.model");
-const SECRET = process.env.JWT_KEY
-const token = jwt.sign(illustration,  SECRET);
-
+const SECRET = process.env.JWT_KEY;
 
 const getTokenFromHeader = (req, res, next) => {
     if (
@@ -12,21 +7,17 @@ const getTokenFromHeader = (req, res, next) => {
         req.headers.authorization.split(" ")[0] === "Bearer"
     ) {
         const token = req.headers.authorization.split(" ")[1];
-        const de = JSON.parse(
-            Buffer.from(token.split(".")[1], "base64").toString()
-        );
 
         jwt.verify(token, SECRET, (err, decoded) => {
             if (err) {
-                next();
+                return res.status(401).json({ error: "Invalid token" });
             }
-            res.tokenPayload = decoded;
+            req.tokenPayload = decoded;
+            next();
         });
+    } else {
+        return res.status(401).json({ error: "No token provided" });
     }
-    next();
 };
 
-
-app.get("/test-token", (req, res) => {
-    res.status(200).send(res.tokenPayload);
-});
+module.exports = getTokenFromHeader;
