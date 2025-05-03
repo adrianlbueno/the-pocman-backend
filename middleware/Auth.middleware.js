@@ -1,10 +1,9 @@
 const jwt = require("jsonwebtoken");
 const express = require("express");
 const app = express();
-
-const token = jwt.sign( ); //todo
-const SECRET = "testing"
-console.log(token);
+const illustration = require("../models/Illustration.model");
+const SECRET = process.env.JWT_KEY
+const token = jwt.sign(illustration,  SECRET);
 
 
 const getTokenFromHeader = (req, res, next) => {
