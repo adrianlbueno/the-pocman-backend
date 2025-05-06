@@ -3,7 +3,7 @@ const router = express.Router();
 const getTokenFromHeader = require("../middleware/Auth.middleware");
 const Illustration = require('../models/Illustration.model');
 
-router.get('/', async (req, res, next) => {
+router.get('/illustrations', async (req, res, next) => {
     try {
         const illustrations = await Illustration.find();
         console.log(illustrations)
