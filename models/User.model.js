@@ -1,6 +1,7 @@
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const validatorPackage = require('validator')
 
 const User = new Schema(
     {
@@ -11,22 +12,12 @@ const User = new Schema(
         },
         email: {
             type: String,
-            default: "",
-            trim: true,
-            validate: {
-                validator: async function (email) {
-                    const user = await this.constructor.findOne({ email });
-                    if (user) {
-                        if (this.id === user.id) {
-                            return true;
-                        }
-                        return false;
-                    }
-                    return true;
-                },
-                message: (props) => "This email is already in use",
-            },
+            unique: true,
             required: [true, "User email required"],
+            validate: {
+                validator: validatorPackage.isEmail,
+                message: "Please provide a valid email",
+            },
         },
         password: {
             type: String,
