@@ -1,11 +1,18 @@
 require("dotenv").config();
 const mongoose = require('mongoose');
 
-const MONGO_URI = process.env.MONGODB_URI;
+if (process.env.MONGODB_URI === undefined) {
+    console.error("MONGODB_URI is not defined");
+    process.exit(1);
+}
 
+const MONGO_URI = process.env.MONGODB_URI;
+const options = {
+    autoIndex: true,
+}
 const connectDb = async  () => {
     try {
-        await mongoose.connect(MONGO_URI, {});
+        await mongoose.connect(MONGO_URI, options);
         console.log('Connected to MongoDB');
 
     }catch(error) {

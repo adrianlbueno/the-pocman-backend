@@ -33,4 +33,4 @@ const IllustrationSchema = new Schema(
     }
 );
 
-module.exports = mongoose.model("Illustrator", IllustrationSchema);
+module.exports = mongoose.model("Illustration", IllustrationSchema);
