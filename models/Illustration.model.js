@@ -8,7 +8,7 @@ const IllustrationSchema = new Schema({
     image: String
 }, {
     timestamps: true,
-    collection: 'illustrations'
+    collection: 'illustration'
 });
 
 module.exports = model('Illustration', IllustrationSchema);
