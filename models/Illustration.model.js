@@ -1,36 +1,17 @@
-
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
 
-const IllustrationSchema = new Schema(
+const IllustrationSchema = new mongoose.Schema(
     {
-        title: {
-            type: String,
-            default: "",
-            trim: true,
-            required: [true, "title required"],
-        },
-        description: {
-            type: String,
-            default: "",
-            trim: true,
-            required: [true, "description required"],
-        },
-        price: {
-            type: Number,
-            default: "",
-            trim: true,
-        },
-        imageUrl: {
-            type: String,
-            default: "",
-            trim: true,
-            select: false,
-        },
+        id: { type: Number, required: true },
+        title: { type: String, required: true },
+        description: { type: String, required: true },
+        price: { type: Number, required: true },
+        quantity: { type: Number, default: 1 },
+        image: { type: String, required: true }
     },
     {
-        timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" },
+        timestamps: true
     }
 );
 
-module.exports = mongoose.model("Illustration", IllustrationSchema);
+module.exports = mongoose.model("Illustration", IllustrationSchema, "illustrations");

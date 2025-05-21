@@ -2,10 +2,17 @@ const express = require('express');
 const router = express.Router();
 const getTokenFromHeader = require("../middleware/Auth.middleware");
 const Illustration = require('../models/Illustration.model');
+const {connection } = require("mongoose");
 
 router.get('/', async (req, res) => {
     try {
-        const illustrations = await Illustration.find({});
+        const dbName = connection.name;
+        const collections = await connection.db.listCollections().toArray();
+
+        console.log("🧠 DB Name:", dbName);
+        console.log("📂 Collections:", collections.map(c => c.name));
+
+        const illustrations = await Illustration.find();
         res.json(illustrations);
     } catch (error) {
         console.error('Error fetching illustrations:', error);
@@ -34,7 +41,7 @@ router.get('/:id', async (req, res, next) => {
 
 router.post('/', getTokenFromHeader, async (req, res) => {
     try {
-        const newIllustration = await Illustration.create();
+        const newIllustration = await Illustration.create(req.body);
         res.status(201).json(newIllustration);
     } catch (error) {
         console.error('Error creating illustration:', error);
