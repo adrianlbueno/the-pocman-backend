@@ -6,12 +6,6 @@ const {connection } = require("mongoose");
 
 router.get('/', async (req, res) => {
     try {
-        const dbName = connection.name;
-        const collections = await connection.db.listCollections().toArray();
-
-        console.log("🧠 DB Name:", dbName);
-        console.log("📂 Collections:", collections.map(c => c.name));
-
         const illustrations = await Illustration.find();
         res.json(illustrations);
     } catch (error) {
