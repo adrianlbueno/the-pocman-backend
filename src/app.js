@@ -10,14 +10,16 @@ app.use(cors());
 app.get('/', (req, res) => {
   res.send('Welcome to the API');
 });
+
+
 app.use(morgan("dev"));
 app.use(express.json());
 
 const illustrationRoutes = require("../Routes/illustration.route"); // adjust path if needed
-app.use('/illustrations', illustrationRoutes);
+app.use('/illustration', illustrationRoutes);
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Allow any origin
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
 
   if (req.method === "OPTIONS") {

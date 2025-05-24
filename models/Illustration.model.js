@@ -11,4 +11,4 @@ const IllustrationSchema = new Schema({
     collection: 'illustration'
 });
 
-module.exports = model('Illustration', IllustrationSchema);
+module.exports = model('Illustration', IllustrationSchema, 'illustration'); // 'illustration' is the name of the collection in MongoDB

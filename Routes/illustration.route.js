@@ -7,6 +7,7 @@ const {connection } = require("mongoose");
 router.get('/', async (req, res) => {
     try {
         const illustrations = await Illustration.find();
+        console.log('Fetched illustrations:', illustrations);
         res.json(illustrations);
     } catch (error) {
         console.error('Error fetching illustrations:', error);

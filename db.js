@@ -12,8 +12,7 @@ const options = { autoIndex: true };
 
 const connectDb = async () => {
     try {
-        await mongoose.connect(MONGO_URI, options);
-        console.log("Connected to MongoDB");
+       await mongoose.connect(MONGO_URI, options);
     } catch (error) {
         console.error("Error connecting to MongoDB:", error);
         process.exit(1);
