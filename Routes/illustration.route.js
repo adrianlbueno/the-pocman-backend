@@ -7,10 +7,9 @@ const {connection } = require("mongoose");
 router.get('/', async (req, res) => {
     try {
         const illustrations = await Illustration.find();
-        console.log('Fetched illustrations:', illustrations);
         res.json(illustrations);
-    } catch (error) {
-        console.error('Error fetching illustrations:', error);
+
+    } catch (error) {console.error('Error fetching illustrations:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 });
@@ -36,7 +35,7 @@ router.get('/:id', async (req, res, next) => {
 
 router.post('/', getTokenFromHeader, async (req, res) => {
     try {
-        const newIllustration = await Illustration.create(req.body);
+        const newIllustration = await Illustration.create();
         res.status(201).json(newIllustration);
     } catch (error) {
         console.error('Error creating illustration:', error);

@@ -16,7 +16,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 const illustrationRoutes = require("../Routes/illustration.route"); // adjust path if needed
-app.use('/illustration', illustrationRoutes);
+app.use('/illustrations', illustrationRoutes);
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
