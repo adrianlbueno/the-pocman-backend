@@ -1,9 +1,20 @@
 require("dotenv").config();
 
 const app = require('./src/app');
-const PORT = process.env.PORT || 3000;
-console.log(`Server running on port ${PORT}`);
+const connectDb = require('./db');
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+
+(async () => {
+    try {
+        await connectDb();
+        console.log("MongoDB connected");
+
+        app.listen(PORT, () => {
+            console.log(`Server running on port ${PORT}`);
+        });
+    } catch (err) {
+        console.error("Failed to start server:", err);
+        process.exit(1);
+    }
+})();

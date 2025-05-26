@@ -8,11 +8,13 @@ if (!process.env.MONGODB_URI) {
 }
 
 const MONGO_URI = process.env.MONGODB_URI;
+const databaseName = "ThePocman";
 const options = { autoIndex: true };
 
 const connectDb = async () => {
     try {
-       await mongoose.connect(MONGO_URI, options);
+       const connection = await mongoose.connect(MONGO_URI, options);
+       console.log(`Connected to MongoDB database: ${connection.connection.name}`);
     } catch (error) {
         console.error("Error connecting to MongoDB:", error);
         process.exit(1);

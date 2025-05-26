@@ -1,14 +1,16 @@
-const {model, Schema} = require("mongoose");
-const IllustrationSchema = new Schema({
-    id: Number,
-    title: String,
-    description: String,
-    price: Number,
-    quantity: Number,
-    image: String
-}, {
-    timestamps: true,
-    collection: 'illustration'
-});
+const { model, Schema } = require("mongoose");
 
-module.exports = model('Illustration', IllustrationSchema, 'illustration'); // 'illustration' is the name of the collection in MongoDB
+const IllustrationSchema = new Schema(
+    {
+        title: { type: String, required: true },
+        description: String,
+        price: { type: Number, default: 0 },
+        quantity: { type: Number, default: 1 },
+        image: String,
+    },
+    {
+        timestamps: true,
+    }
+);
+
+module.exports = model("Illustration", IllustrationSchema);

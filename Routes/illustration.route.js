@@ -6,11 +6,12 @@ const {connection } = require("mongoose");
 
 router.get('/', async (req, res) => {
     try {
-        const illustrations = await Illustration.find();
+        const illustrations = await Illustration.find({});
         res.json(illustrations);
 
-    } catch (error) {console.error('Error fetching illustrations:', error);
-        res.status(500).json({ message: 'Internal server error' });
+    } catch (error) {
+        console.error('Error fetching illustrations:', error);
+        res.sendStatus(500);
     }
 });
 
