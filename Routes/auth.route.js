@@ -3,9 +3,11 @@ const router = require("express").Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-router.get("/", ()=>{
+const asyncHandler = require("express-async-handler");
+router.get("/", asyncHandler(async (req, res)=>{
     res.json("All good in auth")
-})
+}
+))
 
 router.post("/signup", async (req, res) =>{
     const {name, email, password} = req.body;
@@ -38,7 +40,7 @@ router.post("/signup", async (req, res) =>{
     }
 });
 
-router.post("/login", async (req, res) => {
+router.post("/login", async (req, res, next) => {
     const { email, password } = req.body;
     try {
         const potentialUser = await User.findOne({ email });
