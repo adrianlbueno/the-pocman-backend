@@ -1,9 +1,10 @@
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const passportLocalMongoose = require("passport-local-mongoose");
 const validatorPackage = require('validator')
 
-const User = new Schema(
+const UserScheme = new Schema(
     {
         name: {
             type: String,
@@ -30,5 +31,6 @@ const User = new Schema(
         timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" },
     }
 );
+UserScheme.plugin(passportLocalMongoose)
 
-module.exports = mongoose.model("User", User);
+module.exports = mongoose.model("User", UserScheme);

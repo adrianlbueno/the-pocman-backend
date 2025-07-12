@@ -2,8 +2,8 @@ const User = require("../models/User.model");
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-
 const asyncHandler = require("express-async-handler");
+
 router.get("/", asyncHandler(async (req, res)=>{
     res.json("All good in auth")
 }
