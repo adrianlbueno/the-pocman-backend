@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const passportLocalMongoose = require("passport-local-mongoose");
-const validatorPackage = require('validator')
+const validator = require('validator')
 
 const UserScheme = new Schema(
     {
@@ -15,9 +15,10 @@ const UserScheme = new Schema(
             type: String,
             unique: true,
             required: [true, "User email required"],
-            validate: {
-                validator: validatorPackage.isEmail,
-                message: "Please provide a valid email",
+            validate:{
+                validator: validator.isEmail,
+                message: 'Please provide a valid email',
+                isAsync: false
             },
         },
         password: {

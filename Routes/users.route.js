@@ -14,9 +14,9 @@ router.get('/users', function (req, res,next){
 });
 
 router.post("/users/login", (req, res) => {
-const user = req.app;
-const email = req.body.email;
-const password = req.body.password;
+    const user = req.app;
+    const email = req.body.email;
+    const password = req.body.password;
 
 })
 
@@ -24,6 +24,6 @@ router.post('/users/signup', (req, res) => {
 
 });
 
-router().post('/users/:id', (req, res) => {
+router.post('/users/:id', (req, res) => {
 })
 
