@@ -29,7 +29,6 @@ router.get("/users/:userId", async (req, res,next) => {
         res.status(500).json({ message: "Internal server error" });
         next(error);
     }
-
 });
 
 router.put("/:userId", getTokenFromHeader, async (req, res,next) => {
