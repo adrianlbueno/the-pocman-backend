@@ -3,6 +3,7 @@ const router = require("express").Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
+const { getTokenFromHeader } = require("../middleware/Auth.middleware");
 
 router.get("/", asyncHandler(async (req, res)=>{
     res.json("All good in auth")
@@ -11,6 +12,7 @@ router.get("/", asyncHandler(async (req, res)=>{
 
 router.post("/signup", async (req, res) =>{
     const {name, email, password} = req.body;
+
     try {
         const existingUser = await User.findOne({ email });
 
@@ -72,8 +74,8 @@ router.post("/login", async (req, res, next) => {
     }
 });
 
-router.get("/verify", async (req, res) => {
-    const currentUser = await User.findById(req.tokenPayload.userId);
+router.get("/verify", getTokenFromHeader, async (req, res) => {
+    const {userId} = req.tokenPayload;
+    const currentUser = await User.findById(userId);
     res.status(200).json(currentUser);
-
 });
