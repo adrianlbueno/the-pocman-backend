@@ -20,4 +20,4 @@ const getTokenFromHeader = (req, res, next) => {
     }
 };
 
-module.exports = getTokenFromHeader;
+module.exports = {getTokenFromHeader}

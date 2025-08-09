@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const getTokenFromHeader = require("../middleware/Auth.middleware");
+const {getTokenFromHeader} = require("../middleware/Auth.middleware");
 const Illustration = require('../models/Illustration.model');
 const {connection } = require("mongoose");
 
