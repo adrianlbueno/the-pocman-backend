@@ -11,7 +11,7 @@ router.get("/", asyncHandler(async (req, res)=>{
 ))
 
 router.post("/signup", async (req, res) =>{
-    const {name, email, password} = req.body;
+    const { fullName, email, password} = req.body;
 
     try {
         const existingUser = await User.findOne({ email });
@@ -22,7 +22,7 @@ router.post("/signup", async (req, res) =>{
             const passwordHash = bcrypt.hashSync(password, salt);
             try {
                 await User.create({
-                    name,
+                    fullName,
                     email,
                     passwordHash
                 });

@@ -6,7 +6,7 @@ const validator = require('validator')
 
 const UserScheme = new Schema(
     {
-        fullname: {
+        fullName: {
             type: String,
             default: "",
             trim: true,
