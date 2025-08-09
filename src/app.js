@@ -2,22 +2,20 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
-
+const userRoutes = require("../Routes/users.route");
+const authRoutes = require("../Routes/auth.route");
+const illustrationRoutes = require("../Routes/illustration.route");
 const cors = require('cors');
-app.use(cors());
 
+app.use(cors());
 app.get('/', (req, res) => {
   res.send('Welcome to the API');
 });
-
 app.use(morgan("dev"));
 app.use(express.json());
-
-const illustrationRoutes = require("../Routes/illustration.route"); // adjust path if needed
-const userRoutes = require("../Routes/users.route"); // adjust path if needed
 app.use('/illustrations', illustrationRoutes);
-//todo: add user routes
-app.use();
+app.use('/users', userRoutes);
+app.use('/auth',authRoutes);
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

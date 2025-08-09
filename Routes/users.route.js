@@ -61,5 +61,7 @@ router.delete("/:userId", getTokenFromHeader, async (req, res, next) => {
      }
 });
 
+module.exports = router;
+
 
 

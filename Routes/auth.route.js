@@ -79,3 +79,5 @@ router.get("/verify", getTokenFromHeader, async (req, res) => {
     const currentUser = await User.findById(userId);
     res.status(200).json(currentUser);
 });
+
+module.exports = router;

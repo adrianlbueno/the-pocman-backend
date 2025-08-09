@@ -8,7 +8,6 @@ if (!process.env.MONGODB_URI) {
 }
 
 const MONGO_URI = process.env.MONGODB_URI;
-const databaseName = "ThePocman";
 const options = { autoIndex: true };
 
 const connectDb = async () => {
