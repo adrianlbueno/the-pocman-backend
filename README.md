@@ -4,14 +4,13 @@ A **Node.js REST API** backend for illustration and artwork management with **JW
 
 ---
 
-## 📌 Overview
+## Overview
 
 The Pocman Backend provides secure user authentication and CRUD operations for managing illustration metadata including titles, descriptions, pricing, and quantities.  
 It is built with **Express.js** and **MongoDB**, following RESTful API design principles.
 
 ---
 
-## ✨ Features
 
 - **User Authentication**: Registration, login, and session management using JWT  
 - **User Management**: CRUD operations for user accounts (with authorization)  
@@ -21,7 +20,7 @@ It is built with **Express.js** and **MongoDB**, following RESTful API design pr
 
 ---
 
-## 🛠 Technology Stack
+## Technology Stack
 
 - **Runtime**: Node.js ≥18  
 - **Framework**: Express.js 5.1.0  
@@ -31,7 +30,7 @@ It is built with **Express.js** and **MongoDB**, following RESTful API design pr
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js ≥18  
