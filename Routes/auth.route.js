@@ -45,15 +45,16 @@ router.post("/signup", async (req, res) =>{
 
 router.post("/login", async (req, res, next) => {
     const { email, password } = req.body;
+    console.log("password", password)
     try {
-        const potentialUser = await User.findOne({ email });
-
+        const potentialUser = await User.findOne({ email }).select('+password');
         if (potentialUser) {
-            const correctPassword = bcrypt.compareSync(password, potentialUser.passwordHash);
+            const correctPassword = bcrypt.compareSync(password, potentialUser.password);
           if (correctPassword) {
+                console.log("secret", process.env.JWT_SECRET )
               const authToken = jwt.sign(
                   { userId: potentialUser._id },
-                  process.env.JWT_SECRET,
+                  process.env.JWT_KEY,
                   {
                       algorithm: "HS256",
                       expiresIn: "6h",
