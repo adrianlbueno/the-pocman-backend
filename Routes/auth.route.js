@@ -12,7 +12,6 @@ router.get("/", asyncHandler(async (req, res)=>{
 
 router.post("/signup", async (req, res) =>{
     const { fullName, email, password} = req.body;
-    console.log(fullName, email, password)
     try {
         const existingUser = await User.findOne({ email });
 
@@ -45,13 +44,11 @@ router.post("/signup", async (req, res) =>{
 
 router.post("/login", async (req, res, next) => {
     const { email, password } = req.body;
-    console.log("password", password)
     try {
         const potentialUser = await User.findOne({ email }).select('+password');
         if (potentialUser) {
             const correctPassword = bcrypt.compareSync(password, potentialUser.password);
           if (correctPassword) {
-                console.log("secret", process.env.JWT_SECRET )
               const authToken = jwt.sign(
                   { userId: potentialUser._id },
                   process.env.JWT_KEY,
