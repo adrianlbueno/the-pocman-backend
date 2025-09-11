@@ -15,16 +15,17 @@ router.post("/signup", async (req, res) =>{
     console.log(fullName, email, password)
     try {
         const existingUser = await User.findOne({ email });
-        console.log("existingUser", existingUser)
+
         if (!existingUser) {
             const saltRounds = 11;
             const salt = bcrypt.genSaltSync(saltRounds);
+            console.log("salt",salt );
             const passwordHash = bcrypt.hashSync(password, salt);
             try {
                 await User.create({
                     fullName,
                     email,
-                    passwordHash
+                    password:passwordHash
                 });
                 res.status(201).json({ message: "User created successfully" });
             }
