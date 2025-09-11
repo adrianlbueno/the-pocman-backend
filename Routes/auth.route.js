@@ -12,13 +12,13 @@ router.get("/", asyncHandler(async (req, res)=>{
 
 router.post("/signup", async (req, res) =>{
     const { fullName, email, password} = req.body;
-
+    console.log(fullName, email, password)
     try {
         const existingUser = await User.findOne({ email });
-
-        if (existingUser) {
+        console.log("existingUser", existingUser)
+        if (!existingUser) {
             const saltRounds = 11;
-            const salt = bcrypt.getSaltSync(saltRounds);
+            const salt = bcrypt.genSaltSync(saltRounds);
             const passwordHash = bcrypt.hashSync(password, salt);
             try {
                 await User.create({

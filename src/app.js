@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 app.use(morgan("dev"));
 app.use(express.json());
 app.use('/illustrations', illustrationRoutes);
+app.use('/api/users', authRoutes);
 app.use('/users', userRoutes);
-app.use('/auth',authRoutes);
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

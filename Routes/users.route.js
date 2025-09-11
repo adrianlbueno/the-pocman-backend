@@ -4,8 +4,6 @@ const {getTokenFromHeader} = require("../middleware/Auth.middleware");
 const User = require('../models/User.model');
 const ObjectId = require("mongodb").ObjectId;
 
-console.log("type getTokenFromHeader", typeof getTokenFromHeader);
-
 router.get('/', async (req, res ,next) =>{
      const allUsers = User.find()
         .then(allUsers =>{
