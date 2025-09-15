@@ -44,6 +44,7 @@ router.post("/signup", async (req, res) =>{
 
 router.post("/login", async (req, res, next) => {
     const { email, password } = req.body;
+
     try {
         const potentialUser = await User.findOne({ email }).select('+password');
         if (potentialUser) {
