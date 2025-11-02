@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const {getTokenFromHeader} = require("../middleware/Auth.middleware");
 const Illustration = require('../models/Illustration.model');
-const {connection } = require("mongoose");
+const User = require("../models/User.model");
+
 
 router.get('/', async (req, res) => {
     try {
@@ -31,6 +32,20 @@ router.get('/:id', async (req, res, next) => {
     } catch (error) {
         console.error('Error fetching illustration:', error);
         res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+router.put("/:illustrationId", getTokenFromHeader, async (req, res,next) => {
+    const payload = req.body;
+    const { illustrationId} = req.params;
+
+    try {
+        const updateIllustration = await Illustration.findByIdAndUpdate(illustrationId, payload, { new: true });
+        res.status(200).json(updateIllustration);
+    }  catch (error) {
+        console.error("Error updating illustration:", error);
+        res.status(500).json({ message: "Internal server error" });
+        next(error);
     }
 });
 

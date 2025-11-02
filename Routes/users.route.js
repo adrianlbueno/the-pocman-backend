@@ -36,8 +36,6 @@ router.put("/:userId", getTokenFromHeader, async (req, res,next) => {
      const payload = req.body;
      const { userId } = req.params;
 
-     console.log("Request Id:", userId);
-     console.log("Payload:", payload);
      try {
          const updateUser = await User.findByIdAndUpdate(userId, payload, { new: true });
          res.status(200).json(updateUser);
