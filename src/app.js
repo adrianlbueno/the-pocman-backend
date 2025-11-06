@@ -1,4 +1,3 @@
-const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
@@ -13,7 +12,7 @@ app.get('/', (req, res) => {
 });
 app.use(morgan("dev"));
 app.use(express.json());
-app.use('/illustrations', illustrationRoutes);
+app.use('/api/illustrations', illustrationRoutes);
 app.use('/api/users', authRoutes);
 app.use('/users', userRoutes);
 
