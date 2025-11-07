@@ -18,7 +18,6 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
-
     if (!id.match(/^[0-9a-fA-F]{24}$/)) {
         return res.status(400).json({ message: 'Invalid ID format' });
     }
@@ -51,8 +50,13 @@ router.put("/:illustrationId", getTokenFromHeader, async (req, res,next) => {
 
 router.post('/', getTokenFromHeader, async (req, res) => {
     try {
-        const newIllustration = await Illustration.create();
-        res.status(201).json(newIllustration);
+        const {
+            title, description, price, image
+        } = req.body;
+
+         await Illustration.create({title, description, price, image});
+        res.status(201).json({message:"Illustration created successfully"});
+
     } catch (error) {
         console.error('Error creating illustration:', error);
         res.status(400).json({ message: 'Invalid data', error });
